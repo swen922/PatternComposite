@@ -2,6 +2,9 @@ import military.Military;
 import military.MilitaryMan;
 import military.Rank;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class App {
 
     public static void main(String[] args) {
@@ -40,6 +43,20 @@ public class App {
                 }
             }
         }
+        List<Military> all = getAllSubj(general);
+        System.out.println(all.size());
+        for (Military military : all) {
+            System.out.println(military);
+        }
 
+    }
+
+    private static List<Military> getAllSubj(Military first) {
+        List<Military> result = new ArrayList<>();
+        result.add(first);
+        for (Military m : first.getBand()) {
+            result.addAll(getAllSubj(m));
+        }
+        return result;
     }
 }

@@ -7,4 +7,5 @@ public interface Military {
     public void perform(Rank orderedRank, String order);
     public void receiveSubordinate(Military subordinate);
     public Military getSubject(int number);
+    public List<Military> getBand();
 }
