@@ -55,15 +55,27 @@ public class MilitaryMan implements Military {
         return null;
     }
 
+    @Override
     public List<Military> getBand() {
         return band;
+    }
+
+    @Override
+    public int bandSize() {
+        int result = 0;
+        for (Military m : this.band) {
+            result++;
+            result += m.bandSize();
+        }
+        return result;
     }
 
     @Override
     public String toString() {
         return "MilitaryMan{" +
                 "myRank=" + myRank +
-                ", i have band with size=" + band.size() +
+                ", i have " + band.size() + " subjects and" +
+                ", i have band with size=" + bandSize() +
                 '}';
     }
 }

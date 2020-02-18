@@ -8,4 +8,5 @@ public interface Military {
     public void receiveSubordinate(Military subordinate);
     public Military getSubject(int number);
     public List<Military> getBand();
+    public int bandSize();
 }

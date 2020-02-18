@@ -44,10 +44,12 @@ public class App {
             }
         }
         List<Military> all = getAllSubj(general);
-        System.out.println(all.size());
+        System.out.println("all.size() = " + all.size());
         for (Military military : all) {
             System.out.println(military);
         }
+
+        System.out.println("general.bandSize() = " + general.bandSize());
 
     }
 
