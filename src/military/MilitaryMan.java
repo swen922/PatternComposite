@@ -26,19 +26,19 @@ public class MilitaryMan implements Military {
     @Override
     public void perform(Rank orderedRank, String order) {
 
-        if (orderedRank.compareTo(myRank) < 0) {
+        if (myRank.compareTo(orderedRank) > 0) {
             StringBuilder sb = new StringBuilder("");
             for (int z = 0; z < myRank.ordinal(); z++) {
                 sb.append("-");
             }
-            System.out.println(sb.toString() + " Yes! Perform You Order, Sir! Order = " + order + "\nI'm " + myRank + "\n");
+            System.out.println(sb.toString() + " - Yes! Perform You Order, Sir! Order = " + order + "\nI'm " + myRank + "\n");
             order(order);
         }
-        else if (orderedRank.compareTo(myRank) == 0) {
-            System.out.println("Please show Your authority, Sir! You can't order me Yourself!\n");
+        else if (myRank.compareTo(orderedRank) == 0) {
+            System.out.println("- Please show Your authority, Sir! You can't order me Yourself!\n");
         }
         else {
-            System.out.println("You are crazy! 10 squeezings right now!\n");
+            System.out.println("- You are crazy! 10 squeezings right now!\n");
         }
     }
 
