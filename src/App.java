@@ -2,6 +2,8 @@ import military.Military;
 import military.MilitaryMan;
 import military.Rank;
 
+/**  Компоновщик, также известен как: Дерево, Composite */
+
 import java.util.ArrayList;
 import java.util.List;
 
